@@ -4,9 +4,293 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chi-King House</title>
 </head>
-<body>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0%;
+        padding: 0%;
+    }
+    /*Navbar */
+    .navbar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        position: fixed;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .options{
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 15%;
+        margin-right: 17%; 
+    }
+    a{
+        color: #dd0031;
+        text-decoration:none
+    }
+    .logo{
+        height: 90px;
+        padding-left: 30px;
+        border-right: inset 3px;
+        
+    }
+    .loc>img{
+        height: 30px;
+        margin-left: 10px;
+        padding-top: 2px;        
+    }
+    .loc{
+        margin-bottom: 17px;
+    }
+    .SigninCss{
+        margin-left: -7%;
+        margin-right: 40px;
+    }
+    .navbar>button{
+        width: 150px;
+        height: 50px;
+        background-color: #dd0031;
+        color: white;
+        border-radius: 20px;
+        padding-bottom: 50px;
+      }
+      .search{
+        height: 30px;
+        margin-left: 20px;
+      }
+
+      /*Dropdown bar*/
+      .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: #dd0031;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: aliceblue;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+.column a {
+  float: none;
+  color: #dd0031;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.column a:hover {
+  background-color: #ddd;
+}
+.row{
+    height: 80px;
+    display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/*Top*/
+.top{
+    width: 100%;
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+.tophead{
+    margin:0 10% 0 10% ;
+    display: grid;
+    grid-template-areas: 
+    "a a"
+    "b c ";
+    gap: 30px;
+}
+.tophead>h1:nth-child(1){
+    grid-area: a;
+    color: #dd0031;
+}
+.tophead>div:nth-child(2){
+    grid-area: b;
+}
+.tophead>div:nth-child(3){
+    grid-area: c;  
+}
+
+.topimg{
+    margin-right: 10%; 
+}
+.topimg>img{
+    height: 350px;
+}
+.tophead img{
+    height: 50px;
+}
+
+/*Mid1*/
+.mid1{
+    width: 80%;
+    margin: 3% 10% 5% 10%;
+    display: flex;
+    gap: 2%;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: aliceblue;
+    border-radius: 3%;
+}
+.mid1text{
+    padding-left: 50px;
+    width: 40%;
+}
+.mid1text>h1{
+    color: #004f71;
+}
+.mid1text>h3{
+    color: #485259;
+}
+.mid1text>div{
+    width: 35%;
+    height: 40px;
+    padding-top: 8px;
+    border: solid 1px #dd0031;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+}
+.mid1img>img{
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
+
+/*mid2*/
+.mid2{
+    width: 80%;
+    margin: 3% 10% 5% 10%;
+    height: 400px;
+    margin: auto;
+    background-image: url(https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Home%20Page%20Refresh/Home%20Page%20Refresh%20V2/Catering_Desktop_compressed.jpg);
     
+
+}
+
+.mid2text{
+    width: 30%;
+    background-color: white;
+}
+
+
+
+</style>
+<body>
+
+    <!-- Create the Navbar Here  -->
+    <div class="navbar">
+        <img class="logo" src="https://www.linkpicture.com/q/Red-and-Yellow-Illustration-Fried-Chicken-Logo.png"></img>
+         <a class="loc" href=""><img src="https://www.linkpicture.com/q/placeholder_6.png" alt=""> Find a restuarant</a>
+        <div class="options"> 
+            <div class="dropdown">
+                <a class="dropbtn" href="" >Menu
+                  <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content"> 
+                  <div class="row">
+                      <a class="column" href="#">Breakfast</a>
+                      <a class="column" href="#">Entrees</a>
+                      <a class="column" href="#">Salads</a>
+                      <a class="column" href="#">Sides</a>
+                      <a class="column" href="#">Kid's Meals</a>
+                      <a class="column" href="#">Treats</a>
+                      <a class="column" href="#">Drinks</a>
+                      <a class="column" href="#">Dipping Sauces and Dressings</a>
+                      <a class="column" href="#">Catering</a>
+                  </div>
+                </div>
+              </div> 
+          <a href="">Stories</a>
+          <a href="">About</a>
+          <a href="">Careers</a>
+        </div>
+          <div class="SigninCss">
+          <a href="">Chi-King House</a>
+          <a href="">( Sign In )</a>
+        </div>
+        <button><h3>Order food</h3></button>
+        <img class="search" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3kf9D-hCo4wMxzNAyTDQ1TpqG25DF3A0rR7yfxeVvHXdPrz69O6wCgzRu55u0hczmrxcZvneWRZk&usqp=CAU&ec=48665701" alt="">
+      </div>
+
+      <!-- Create the top section here  -->
+      <div class="top">
+        <div class="tophead">
+            <h1>An original then, an original now</h1>
+            <div class="top-order-pickup"><a href=""> <img src="https://img.freepik.com/premium-vector/readymade-food-go-paperboard-package-eco-friendly-meal-red-delivery-sample-order-product-box-packet-isolated-white-stock-vector-flat-2d-illustration_599742-96.jpg?w=2000" alt=""> Order Pickup</a></div>
+            <div class="top-order-pickup"><a href=""> <img src="https://icones.pro/wp-content/uploads/2021/05/icone-livraison-rouge.png" alt="">Order Delivery </a></div>
+        </div>
+        <div class="topimg">
+            <img  src="https://media.istockphoto.com/id/511520568/photo/fried-chicken-sandwich.jpg?s=612x612&w=0&k=20&c=tpgmjNZeBPVuJwtweGbgwHmr7_0gC0QMV5Ik45whiPk=" alt="">
+        </div>
+    </div>
+
+    <!-- Create the mid 1 section here  -->
+
+    <div class="mid1">
+        <div class="mid1text">
+            <h1>Hungry for more?</h1>
+            <h3>Whether you're hungry for a freshly prepared salad or the Chi-King House® Chicken Sandwich with Waffle Potato Fries™, we're serving delicious food made with quality ingredients every day (except Sunday).</h3>
+            <div><a href="">View full menu</a></div>
+        </div>
+        <div class="mid1img"><img src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Home%20Page%20Refresh/Home%20Page%20Refresh%20V2/Together-Salads-menu-module-desktop.jpg?h=454&w=648&la=en " alt=""></div>
+    </div>
+
+    <!-- Create the mid 2 section here  -->
+
+    <div class="mid2">
+        <div class="mid2text">
+            <h2>Catering for any gathering</h2>
+            <p>From breakfast items, party trays to packaged meals, Chi-King House® Catering has something for every occasion.</p>
+            <div><a href="">View catering menu</a></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
+
+ 
