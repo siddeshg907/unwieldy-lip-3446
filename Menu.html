@@ -56,65 +56,17 @@
         width: 150px;
         height: 50px;
         background-color: #dd0031;
-        color: white;
         border-radius: 20px;
         padding-bottom: 50px;
         margin-left: 125px ;
       }
+      .navbar>button>a>h3{
+        color: white;
+      }
 
-      /*Dropdown bar*/
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: #dd0031;
-  padding: 14px 16px;
-  background-color: inherit;
-  font: inherit;
-  margin: 0;
-}
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: aliceblue;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  width: 100%;
-  left: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.column {
-  float: left;
-  padding: 10px;
-}
-.column a {
-  float: none;
-  color: #dd0031;
-  padding: 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.column a:hover {
-  background-color: #ddd;
-}
-.row{
-    height: 80px;
-    display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
-}
+      /*filter*/
+      
+        
 /*bottom*/
 .bottom{
     background: url(https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Footer%20Images/footer-burger-phone-desktop-new-3.jpg);
@@ -415,7 +367,67 @@ a,a:hover {
     text-decoration: underline; 
     transition: 1s; 
     border-color: #485259;
-} 
+}
+/*head*/
+#menuhead{
+  width: 20%;
+  margin: auto;
+  padding-top: 2%;
+  color: #dd0031;
+}
+
+
+/*menu*/
+#menucont {
+        /* border: 2px solid red; */
+        width: 85%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding-top: 5%;
+        text-align: center;
+        
+      }
+      #menucont > div {
+        /* border: 2px solid red; */
+       
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding:0 0 30px 10px;
+        border-radius: 30px;
+
+      }
+      #menucont > div > img {
+        height: 300px;
+
+      }
+      #menucont > div > button {
+        display: block;
+        width: 150px;
+        height: 70px;
+        margin: auto;
+        background-color:#dd0031;
+        border: none;
+        padding: 4px;
+        border-radius: 50px;
+        color: white;
+        font-size: large;
+      }
+      /*filter*/
+      #filter{
+        width: 100%;
+        margin-top: 6%;
+        height: 50px;
+        text-align:center;
+        border:solid 2px #dd0031;
+        color: #dd0031;
+        font-size: large;
+        box-shadow: #dd0031(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+
+
+
 
 </style>
 <body>
@@ -428,20 +440,7 @@ a,a:hover {
                 <a class="dropbtn" href="" >Menu
                   <i class="fa fa-caret-down"></i>
                 </a>
-                <div class="dropdown-content"> 
-                  <div class="row">
-                      <a class="column" href="#">Breakfast</a>
-                      <a class="column" href="#">Entrees</a>
-                      <a class="column" href="#">Salads</a>
-                      <a class="column" href="#">Sides</a>
-                      <a class="column" href="#">Kid's Meals</a>
-                      <a class="column" href="#">Treats</a>
-                      <a class="column" href="#">Drinks</a>
-                      <a class="column" href="#">Dipping Sauces and Dressings</a>
-                      <a class="column" href="#">Catering</a>
-                  </div>
                 </div>
-              </div> 
           <a href="">Stories</a>
           <a href="">About</a>
           <a href="">Careers</a>
@@ -450,11 +449,27 @@ a,a:hover {
           <a href="">Chi-King House</a>
           <a href="signup.html">( Sign In )</a>
         </div>
-        <button><h3>Order food</h3></button>
+        <button><a href="order.html"><h3>Order food</h3></a></button>
       </div>
+       
+        <select id="filter">
+          <option value="">Filter By Category</option>
+            <option  value="breakfast" >Breakfast</option>
+            <option  value="enteers" >Entrees</option>
+            <option  value="salad" >Salads</option>
+            <option  value="sides" >Sides</option>
+            <option  value="kidsMeal" >Kid's Meals</option>
+            <option  value="treats" >Treats</option>
+            <option  value="drinks" >Drinks</option>
+            <option  value="sauces" >Dipping Sauces and Dressings</option>
+            <option  value="" >Catering</option>
+        </select>
 
-      <div>
-        <img src="https://www.mcdonalds.com/content/dam/sites/usa/nfl/publication/1PUB_McCrispy_2336x1040.jpg" alt="">
+      <h1 id="menuhead">Chi-King House® Menu</h1>
+
+      <div id="menucont">
+        <!-- Here Append All the Products  -->
+        
       </div>
 
 <!-- Create the bottom section here  -->
@@ -614,42 +629,48 @@ id:1,
 menu_type:"breakfast",
 name:"Chicken Biscuit",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Breakfast/Breakfast%20PDP/_0000s_0000_Stack620_0000_CFA_1605_60_Biscuit_Chicken_PROD_2155_1240px.png",
-description:"460 Cal per Biscuit"
+description:"460 Cal per Biscuit",
+price:200
 },
 {
 id:2,
 menu_type:"breakfast",
 name:"Spicy Chicken Biscuit",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Breakfast/Breakfast%20PDP/_0000s_0019_%5BFeed%5D_0000s_0019_Breakfast_Biscuit-Spicy-Chicken.png",
-description:"430 Cal per biscuit"
+description:"430 Cal per biscuit",
+price:250
 },
 {
 id:3,
 menu_type:"breakfast",
 name:"Chick-n-Minis",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Breakfast/Breakfast%20PDP/_0000s_0014_%5BFeed%5D_0000s_0024_Breakfast_Chicken-Mini-4ct.png",
-description:"360 Cal per 4 Chick-n-Minis"
+description:"360 Cal per 4 Chick-n-Minis",
+price:220
 },
 {
 id:4,
 menu_type:"breakfast",
 name:"Egg White Grill",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Breakfast/Breakfast%20PDP/_0000s_0039_Stack620_0011_35592_eggWHTchk_p1_trg_42016_1240px.png",
-description:"290 Cal per sandwich"
+description:"290 Cal per sandwich",
+price:230
 },
 {
 id:5,
 menu_type:"breakfast",
 name:"Hash Brown Scramble Burrito",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Breakfast/Breakfast%20PDP/_0000s_0004_ChickenSausageBurrito-pdp_1797v2_2880px_resize2.png",
-description:"700 Cal per Burrito"
+description:"700 Cal per Burrito",
+price:300
 },
 {
 id:6,
 menu_type:"breakfast",
 name:"Hash Brown Scramble Bowl",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Breakfast/Breakfast%20PDP/_0000s_0005_ChickenHashbrownBreakfastBowl-pdp_Hearty-Breakfast-Bowl_resize2.png",
-description:"470 Cal per bowl"
+description:"470 Cal per bowl",
+price:100
 },
 //Enteers
 {
@@ -657,42 +678,48 @@ id:7,
 menu_type:"enteers",
 name:"Chicken Sandwich",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Entrees/Jul19_CFASandwich_pdp.png",
-description:"440 Cal per Sandwich"
+description:"440 Cal per Sandwich",
+price:150
 },
 {
 id:8,
 menu_type:"enteers",
 name:"Deluxe Sandwich",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Entree/Entree%20PDP/_0000s_0004_NEWStack6200001CFAPDPDeluxeSandwich1085png.png",
-description:"500 Cal per Sandwich"
+description:"500 Cal per Sandwich",
+price:180
 },
 {
 id:9,
 menu_type:"enteers",
 name:"Spicy Chicken Sandwich",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Entrees/CFASpicySandwich_1080.png",
-description:"460 Cal per Sandwich"
+description:"460 Cal per Sandwich",
+price:220
 },
 {
 id:10,
 menu_type:"enteers",
 name:"Spicy Deluxe Sandwich",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Entree/Entree%20Desktop/_0003s_0012_%5BFeed%5D_0001s_0023_Entrees_Spicy-Deluxe-Sandwich.png",
-description:"550 Cal per Sandwich"
+description:"550 Cal per Sandwich",
+price:160
 },
 {
 id:11,
 menu_type:"enteers",
 name:"Grilled Chicken Sandwich",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Entree/Entree%20PDP/_0000s_0009_Final__0026_CFA_PDP_Grilled-Deluxe-Sandwich_1085.png",
-description:"380 Cal per Sandwich"
+description:"380 Cal per Sandwich",
+price:300
 },
 {
 id:12,
 menu_type:"enteers",
 name:"Grilled Chicken Club Sandwich",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Entrees/grilledClub_colbyJack_PDP.png",
-description:"520 Cal per Sandwich"
+description:"520 Cal per Sandwich",
+price:280
 },
 //salads
 {
@@ -700,21 +727,24 @@ id:13,
 menu_type:"salad",
 name:"Cobb Salad",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Salads%26wraps/cobbSalad_nug_pdp.png",
-description:"850 Cal per salad"
+description:"850 Cal per salad",
+price:180
 },
 {
 id:14,
 menu_type:"salad",
 name:"Spicy Southwest Salad",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Salads%26wraps/sswSalad_spicyGrilled_pdp.png",
-description:"690 Cal per salad"
+description:"690 Cal per salad",
+price:200
 },
 {
 id:15,
 menu_type:"salad",
 name:"Market Salad",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Salads%26wraps/marketSalad_grilled_pdp.png",
-description:"540 Cal per Salad"
+description:"540 Cal per Salad",
+price:250
 },
 //kidsMeal
 {
@@ -722,21 +752,24 @@ id:16,
 menu_type:"kidsMeal",
 name:"5 Ct Nuggets Kid's Meal",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Entrees/Dec2019_CFANuggets_5ct_pdp.png",
-description:"160 Cal per Entree"
+description:"160 Cal per Entree",
+price:200
 },
 {
 id:17,
 menu_type:"kidsMeal",
 name:"2 Ct Chick-n-Strips",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Entrees/strips_2ct_PDP.png",
-description:"200 Cal per entrée"
+description:"200 Cal per entrée",
+price:220
 },
 {
 id:18,
 menu_type:"kidsMeal",
 name:"5 Ct Grilled Nuggets Kid's Meal",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Entrees/Dec2019_GrilledNuggets_5ct_pdp.png",
-description:"80 Cal per Entree"
+description:"80 Cal per Entree",
+price:150
 },
 //treats
 {
@@ -744,21 +777,24 @@ id:19,
 menu_type:"treats",
 name:"Chocolate Fudge Brownie",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Treats/Treats%20PDP/031717_FudgeChunkBrownie_PDP.png",
-description:"380 Cal per Brownie"
+description:"380 Cal per Brownie",
+price:100
 },
 {
 id:20,
 menu_type:"treats",
 name:"Cookies &amp; Cream Milkshake",
 product_image:"https://www.cfacdn.com/img/order/menu/Mobile/Desserts/Menu%20Item/16oz_C%26C_Milkshake-1080.png",
-description:" 630 Cal per Milkshake"
+description:" 630 Cal per Milkshake",
+price:80
 },
 {
 id:21,
 menu_type:"treats",
 name:"Chocolate Milkshake",
 product_image:"https://www.cfacdn.com/img/order/menu/Mobile/Desserts/Menu%20Item/16oz_ChocolateMilkshake-1080.png",
-description:"590 Cal per Milkshake"
+description:"590 Cal per Milkshake",
+price:110
 },
 //Drinks
 {
@@ -766,21 +802,24 @@ id:22,
 menu_type:"drinks",
 name:"Coca-Cola",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Drinks/Drinks%20PDP/_0000s_0022_Feed_Menu_0000_Drinks_Coca-cola.png",
-description:"140 Cal per Container"
+description:"140 Cal per Container",
+price:50
 },
 {
 id:23,
 menu_type:"drinks",
 name:"Dr Pepper",
 product_image:"https://www.cfacdn.com/img/order/menu/Mobile/Beverages/Parent/DrPepper_PaperCup_straight_wet_1200x1200.png",
-description:"180 Cal per Container"
+description:"180 Cal per Container",
+price:80
 },
 {
 id:24,
 menu_type:"drinks",
 name:"DASANI Bottled Water",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Drinks/Drinks%20PDP/_0000s_0026_%5BFeed%5D_0006s_0014_Drinks_Dasani-Water.png",
-description:"0 Cal per Bottle"
+description:"0 Cal per Bottle",
+price:20
 },
 //sides
 {
@@ -788,21 +827,24 @@ id:25,
 menu_type:"sides",
 name:"Waffle Potato Fries",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/Medium_Lowered_1217shoot_1080x1080.png",
-description:"420 Cal per Serving"
+description:"420 Cal per Serving",
+price:120
 },
 {
 id:26,
 menu_type:"sides",
 name:"Fruit Cup",
 product_image:"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Sides/Sides%20PDP/_0000s_0010_%5BFeed%5D_0003s_0002_Sides_Fruit-Cup.png",
-description:"60 Cal per Serving"
+description:"60 Cal per Serving",
+price:150
 },
 {
 id:27,
 menu_type:"sides",
 name:"Side Salad",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Sides%26treats/sideSalad_pdp.png",
-description:"470 Cal per Serving"
+description:"470 Cal per Serving",
+price:160
 },
 //Dipping Sauces and Dressings
 {
@@ -810,26 +852,87 @@ id:28,
 menu_type:"sauces",
 name:"Barbeque Sauce",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Modifiers/Sauces/sauces_1ozPDP/Sauce_Barbeque_PDP.png",
-description:"45 Cal per Container" 
+description:"45 Cal per Container", 
+price:20
 },
 {
 id:29,
 menu_type:"sauces",
 name:"Chi-king Sauce",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Modifiers/Sauces/sauces_1ozPDP/Sauce_CFA-Sauce_PDP.png",
-description:"140 Cal per Container" 
+description:"140 Cal per Container",
+price:20
 },
 {
 id:30,
 menu_type:"sauces",
 name:"Garden Herb Ranch Sauce",
 product_image:"https://www.cfacdn.com/img/order/menu/Online/Modifiers/Sauces/sauces_1ozPDP/Sauce_Garden-Herb-Ranch_PDP.png",
-description:"140 Cal per Container" 
+description:"140 Cal per Container", 
+price:20
 }
 ]
 
 
+let filterby = document.getElementById("filter");
+    filterby.addEventListener("change", function () {
+      if (filterby.value == "") {
+        displayData(Menu);
+      } else {
+        let filteredData = Menu.filter(function (product) {
+          return product.menu_type == filterby.value;
+        });
+        displayData(filteredData);
+      }
+    });
 
+let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+let container=document.getElementById("menucont");
+function displayData(Menu){
+container.innerHTML=""
+Menu.forEach(product => {
+        let card = document.createElement("div")      
+        let img = document.createElement("img");
+        let name = document.createElement("h2");
+        let description = document.createElement("p");
+        let category = document.createElement("h4");
+        let price = document.createElement("h3");
+        let addTocart = document.createElement("button");
+
+        img.src = product.product_image;
+        name.innerText = product.name;
+        price.innerText = `₹${product.price}`;
+        description.innerText = product.description;
+        
+        addTocart.innerText = "Order Now";
+
+        addTocart.addEventListener("click",function(){
+          if (checkAvalible(product)) {
+            alert("Product Already in Cart");
+          } else {
+            cartData.push({ ...product, quantity: 1 });
+
+            localStorage.setItem("cart", JSON.stringify(cartData));
+            alert("Product Added To Cart");
+          }
+        })
+
+        card.append(img, name, price, description, addTocart);
+        container.append(card);
+
+});
+}
+
+function checkAvalible(product) {
+      for (let i = 0; i < cartData.length; i++) {
+        if (product.id === cartData[i].id) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+displayData(Menu)
 
 
 </script>
