@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset = "UTF-8" />
+	<title>Checkout</title>
+	
+	
+
+	<style>
+		*{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0%;
+        padding: 0%;
+    /*Navbar */
+    }
+   .navbar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        position: fixed;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        
+    }
+    .options{
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 15%;
+        margin-right: 17%; 
+    }
+    a{
+        color: #dd0031;
+        text-decoration:none
+    }
+    .logo{
+        height: 90px;
+        padding-left: 60px;
+        border-right: inset 1px;
+        
+    }
+    .loc>img{
+        height: 30px;
+        margin-left: 10px;
+        padding-top: 2px;        
+    }
+    .loc{
+        margin-bottom: 17px;
+    }
+    .SigninCss{
+        margin-left: -7%;
+        margin-right: 40px;
+    }
+    .navbar>button{
+        width: px;
+        padding-top: 2px;
+
+        background-color: #dd0031;
+        border-radius: 20px;
+		padding-bottom:2px ;
+        margin-left: 125px ;
+      }
+      .navbar>button>a>h3{
+        color: white;
+      }
+
+
+		#second {
+
+			height: 500px;
+
+		}
+
+		#first {
+
+			height: 500px;
+		}
+
+		#MainPage {
+			display: grid;
+			width: 80%;
+			grid-template-columns: 55% 30%;
+			grid-gap: 5%;
+			padding-top: 150px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#total {
+			font-weight: bold;
+		}
+
+		#tot {
+			font-weight: bold;
+			color: black;
+		}
+		#gif{
+			margin-left: 30%;
+		}
+		#msg{
+			display: none;
+		}
+        #in{
+	margin: 0;
+	height: 30px;
+	background-color:#E0E0E0;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#debit{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 20px 20px;
+}
+
+#debit input {
+	height: 30px;
+	outline: none;
+}
+
+#bt{
+	height: 40px;
+	padding: 10px 10px;
+	width: 150px;
+	margin-left: 2%;
+	background-color: #dd0031;
+}
+
+#card{
+	width: 220px;
+}
+
+#card-top{
+	display: flex;
+	gap: 15px;
+}
+
+#card-bottom{
+	display: flex;
+	gap: 15px;
+}
+#check{
+	height: 20px;
+	margin: 0;
+}
+
+
+.bottom{
+
+	display: flex;
+	flex-direction: column;
+	margin-left: 0;
+}
+
+button{
+	background-color: #F50057;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+}
+
+p{
+	font-family: sans-serif;
+}
+
+
+
+#new1{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+#line{
+	width: 100%;
+	height: 1px;
+	background-color: lightgrey;
+}
+
+#green{
+	height: 500px;
+	border-color: lightgrey;
+	background-color: #eee;
+	width: 100%;
+}
+
+#second{
+	padding: 10px 10px;
+	color: black;
+}
+
+button{
+	padding: 20px 20px;
+}
+
+#checkboxx{
+	display: flex;
+	gap: 10px;
+	padding: 20px 20px;
+
+}
+
+#checkboxx p{
+	font-family: arial;
+	font-size: 16px;
+}
+
+#second > div > p{
+	color: #90A4AE;
+	border: 1px red;
+}
+#lal{
+	color: red;
+}
+
+/*bottom*/
+.bottom{
+  padding-top: 100px;
+  
+}
+.bottom>div{
+  background: url(https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Footer%20Images/footer-burger-phone-desktop-new-3.jpg);
+   
+    background-repeat: no-repeat;
+  background-size: 100% ;
+    padding:3% 10% 5% 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    color: #485259;
+}
+.bottom>div>img{
+    width: 30%; 
+}
+
+/*footer*/
+@font-face { 
+  font-family:apercu;
+  src:url(https://d31iqi82ivd0ac.cloudfront.net/apercu-regular.eot);
+  src:url(https://d31iqi82ivd0ac.cloudfront.net/apercu-regular.woff2) format("woff2"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-regular.woff) format("woff"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-regular.ttf) format("truetype"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-regular.svg#apercu-regular) format("svg"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-regular.eot#iefix) format("embedded-opentype");
+  font-weight:400;
+  font-style:normal;
+} 
+@font-face { 
+  font-family:apercu;
+  src:url(https://d31iqi82ivd0ac.cloudfront.net/apercu-medium.eot);
+  src:url(https://d31iqi82ivd0ac.cloudfront.net/apercu-medium.woff2) format("woff2"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-medium.woff) format("woff"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-medium.ttf) format("truetype"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-medium.svg#apercu-medium) format("svg"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-medium.eot#iefix) format("embedded-opentype");
+  font-weight:600;
+  font-style:normal;
+} 
+@font-face { 
+  font-family:apercu;
+  src:url(https://d31iqi82ivd0ac.cloudfront.net/apercu-bold.eot);
+  src:url(https://d31iqi82ivd0ac.cloudfront.net/apercu-bold.woff2) format("woff2"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-bold.woff) format("woff"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-bold.ttf) format("truetype"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-bold.svg#apercu-bold) format("svg"),url(https://d31iqi82ivd0ac.cloudfront.net/apercu-bold.eot#iefix) format("embedded-opentype");
+  font-weight:800;
+  font-style:normal;
+} 
+@font-face { 
+  font-family:icomoon;
+  src:url(https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/fonts/icomoon.eot?c5r3y4);
+  src:url(https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/fonts/icomoon.eot?c5r3y4#iefix) format("embedded-opentype"),url(https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/fonts/icomoon.ttf?c5r3y4) format("truetype"),url(https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/fonts/icomoon.woff?c5r3y4) format("woff"),url(https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/fonts/icomoon.svg?c5r3y4#icomoon) format("svg");
+  font-weight:400;
+  font-style:normal;
+} 
+
+footer { 
+    display: block;
+} 
+
+.footer { 
+    background: #fff; 
+    position: relative; 
+    z-index: 30;
+} 
+
+.frame { 
+    padding-top: 64px; 
+    position: relative; 
+    z-index: 300;
+} 
+
+.home .frame { 
+    padding-top: 64px;
+} 
+
+body { 
+    margin:    0;
+    font-family:   apercu,sans-serif;
+    font-size:  1.6rem; 
+    color:  #485259; 
+    font-variant-ligatures:  none; 
+    -webkit-font-variant-ligatures:  none; 
+    -webkit-font-smoothing:  antialiased;
+    padding-top: 0;
+} 
+
+html { 
+    -ms-text-size-adjust:   100%; 
+    -webkit-text-size-adjust:   100%; 
+    font-size:   62.5%;
+    font-family:  sans-serif;
+    color: #222;
+} 
+
+:root { 
+    --yxt-color-brand-primary:   #0f70f0; 
+    --yxt-color-brand-hover:   #0c5ecb; 
+    --yxt-color-text-primary:   #212121; 
+    --yxt-color-borders:   #dcdcdc; 
+    --yxt-font-weight-normal:   400; 
+    --yxt-font-weight-light:   300; 
+    --yxt-font-size-md-lg:   1rem; 
+    --yxt-line-height-md:   1.4; 
+    --yxt-line-height-lg:   1.5; 
+    --yxt-base-spacing:   1rem; 
+    --yxt-searchbar-focus-shadow-height:  0.625rem; 
+    --yxt-searchbar-button-background-color-base:  #fff; 
+    --yxt-searchbar-button-text-color-base:  var(--yxt-color-text-primary); 
+} 
+
+.wrapper { 
+    margin: 0 auto; 
+    max-width: 1380px; 
+    padding: 0 30px; 
+    width: auto;
+} 
+
+.footer-modules { 
+    box-pack: justify; 
+    -moz-justify-content: space-between; 
+    -ms-justify-content: space-between; 
+    -o-justify-content: space-between; 
+    justify-content: space-between; 
+    -ms-flex-pack: justify; 
+    background-color: #fff; 
+    display: flex; 
+    padding: 40px 30px 25px; 
+    max-width: none;
+} 
+
+:selection { 
+    background: #b3d4fc; 
+    text-shadow: none;
+} 
+
+nav { 
+    display: block;
+} 
+
+ul { 
+    margin:  1em 0;
+    padding: 0 0 0 40px;
+} 
+
+nav ul  { 
+    list-style: none; 
+    list-style-image: none;
+} 
+
+.footer-nav ul  { 
+    margin: 0; 
+    padding: 0; 
+    position: relative;
+} 
+
+.social-icons { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+} 
+
+.footer-nav li  { 
+    cursor: pointer; 
+    -webkit-text-decoration-color: #dd0031; 
+    text-decoration-color: #dd0031; 
+    text-decoration: none; 
+    display: inline-block; 
+    margin-right: 25px; 
+    font-weight: 600;
+} 
+
+.footer-nav li:hover  { 
+    text-decoration: none; 
+    transition: 1s;
+} 
+
+.social-icons li  { 
+    display: inline-block; 
+    margin-left: 5px;
+} 
+
+.social-icons li:first-child  { 
+    margin-left: 0;
+} 
+
+a { 
+    border-bottom:  2px dotted transparent; 
+    color:  #dd0031; 
+    text-decoration:  none;
+    transition: color .5s ease;
+} 
+
+a:not(.btn-round):not(.btn)  { 
+    border: 0; 
+    transition: all .3s ease;
+} 
+
+a:active,a:hover { 
+    outline: 0;
+} 
+
+a,a:hover { 
+    transition: color .5s ease;
+} 
+
+@media only screen and (min-width: 959px){ 
+  a:hover { 
+    color: #af272f;
+  } 
+}     
+
+.footer-nav li ul  { 
+    font-size: 1.2rem; 
+    left: 0; 
+    line-height: 20px; 
+    margin-top: 8.65px; 
+    position: absolute; 
+    width: 100%;
+} 
+
+[class^="icon-"] { 
+    font-family: icomoon; 
+    font-style: normal; 
+    font-weight: 400; 
+    font-variant: normal; 
+    text-transform: none; 
+    line-height: 1; 
+    -moz-osx-font-smoothing: grayscale; 
+    -webkit-font-smoothing: antialiased;
+} 
+
+.social-icons a  { 
+    border: 0;
+} 
+
+.social-icons [class^="icon-"]  { 
+    font-size: 3.5rem;
+} 
+
+.icon-facebook-over:before { 
+    content: "\e901";
+} 
+
+.social-icons a:hover  { 
+    color: #af272f;
+} 
+
+.icon-instagram-over:before { 
+    content: "\e900";
+} 
+
+.icon-twitter-over:before { 
+    content: "\e912";
+} 
+
+.icon-youtube-over:before { 
+    content: "\e913";
+} 
+
+.icon-linkedin-over:before { 
+    content: "\e938";
+} 
+
+.footer-nav li ul li  { 
+    margin-right: 15px; 
+    cursor: auto; 
+    font-weight: 500; 
+    white-space: nowrap;
+} 
+
+@media screen and (min-width: 960px){ 
+  .footer-nav li ul li  { 
+    margin-bottom: 4px;
+  } 
+}     
+
+.footer-nav li ul li:hover  { 
+    text-decoration: none;
+} 
+
+.social-icons span  { 
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 1px;
+} 
+
+.footer-nav li ul a  { 
+    cursor: pointer; 
+    -webkit-text-decoration-color: #dd0031; 
+    text-decoration-color: #dd0031; 
+    text-decoration: none; 
+    color: #485259; 
+    font-weight: 600;
+} 
+
+.footer-nav li ul a:hover  { 
+    text-decoration: underline; 
+    transition: 1s; 
+    border-color: #485259;
+}
+	</style>
+
+</head>
+
+<body>
+	 <!-- Create the Navbar Here  -->
+     <div class="navbar">
+        <a href="index.html"><img class="logo" src="https://www.linkpicture.com/q/Red-and-Yellow-Illustration-Fried-Chicken-Logo.png"></img></a>
+         <a class="loc" href="https://goo.gl/maps/YFDWi28MEUkghYyb9"><img src="https://www.linkpicture.com/q/placeholder_6.png" alt=""> Find a restuarant</a>
+        <div class="options"> 
+            <div class="dropdown">
+                <a class="dropbtn" href="" >Menu
+                  <i class="fa fa-caret-down"></i>
+                </a>
+                </div>
+          <a href="">Stories</a>
+          <a href="">About</a>
+          <a href="">Careers</a>
+        </div>
+          <div class="SigninCss">
+          <a href="">Chi-King House</a>
+          <a href="signup.html">( Sign In )</a>
+        </div>
+        <button><a href="order.html"><h3>Order food</h3></a></button>
+      </div>
+
+
+
+
+
+
+		<div id="MainPage">
+
+			<div id="first">
+
+
+				<div id="green">
+
+
+					<p id="in">Credit/Debit Card </p>
+
+					<form action= "index.html">
+						<div id="debit">
+							<input type="text" placeholder="Name on card" required id="name">
+							<div id="card-top">
+								<input type="text" placeholder="Card number" id="card" required/>
+								<input type="text" placeholder="CVV" id="input" required/>
+							</div>
+							<div id="card-bottom">
+								<input type="text" placeholder="Expiry MM" id="input1" required>
+								<input type="text" placeholder="Expiry YY" id="input2" required>
+							</div>
+
+						</div>
+
+						<div>
+							<div id="checkboxx">
+								<input type="checkbox" value="checked">
+								<p>Save Card for future use</p>
+							</div>
+							<div id="gif"></div>
+							<div id="msg">Please fill all fields</div>
+							<button onclick="makepay(event)", order.html.innerHTML="" id="bt">PAY</button>
+						</div>
+					</form>
+					
+				</div>
+
+
+
+
+
+
+
+
+
+			</div>
+
+			<div id="second">
+				<div id="line"></div>
+
+
+
+				<h3>Price Details:</h3>
+
+				<div id="new1">
+					<p>Total MRP</p>
+					₹<span id="cart-total">0</span>
+				</div>
+
+
+				<div id="new1">
+					<p>Sub Total</p>
+					<p id="subtotal"></p>
+				</div>
+
+
+
+				<div id="new1">
+					<p class>Shipping Charges</p>
+					<p id="lal">Free</p>
+				</div>
+
+				<div id="line"></div>
+
+				<div id="new1">
+					<p id="tot">Order Total</p>
+					<p id="total"></p>
+				</div>
+
+
+
+
+
+
+
+
+			</div>
+
+
+
+		</div>
+
+ <!-- Create the bottom section here  -->
+ <div class="bottom">
+	<div>
+		<img src="https://gcdnb.pbrd.co/images/plPK7KN9p8OR.png?o=1" alt="">
+		<h2><span>Join Chi_King House®. Earn points with every qualifying purchase. Redeem available rewards of your choice.</span></h2>
+		<span>The Chick-fil-A App is not presently accepted at Chi-King House® Express™ and Chi-King One licensed locations such as those in airports and college campuses. These locations are operated by professional third-party food contractors and their operating systems do not currently offer guests the ability to earn points or redeem rewards through the Chick-fil-A App.</span>
+		<div>Learn more</div>
+		<h3>Already have an account?  <a href="signup.html">Sign-In</a></h3>
+	</div>
+  </div>
+  
+  <!-- Create the Footer section here  -->
+  <div class="footer-modules wrapper">
+	<nav class="footer-nav">
+	  <ul>
+		<li>
+		  <a href="#">
+			Nutrition &amp; Allergens
+		  </a>
+		</li>
+		<li>
+		  <a href="#">
+			Customer Support
+		  </a>
+		</li>
+		<li>
+		  <a href="#">
+			Careers
+		  </a>
+		</li>
+		<li>
+		  <a href="#">
+			Franchising
+		  </a>
+		</li>
+		<li>
+		  <a href="#">
+			Merchandise
+		  </a>
+		</li>
+		<li>
+		  <a href="#">
+			Press Room
+		  </a>
+		</li>
+		<li>
+		  <ul>
+			<li>
+			  <a href="#">
+				Do business with us
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				Terms and Conditions of Use
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				Privacy Policy
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				California Privacy Notice
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				Cookie and Internet-Based Advertising Policy
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				Do Not Sell Or Share My Personal Information
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				Cookie Preference Center
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				Accessibility
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				Locations listing
+			  </a>
+			</li>
+			<li>
+			  <a href="#">
+				Legal
+			  </a>
+			</li>
+			<br>
+			<li>
+			  © 2022 SIDGORES Properties, Inc. All rights reserved.         
+			</li>
+		  </ul>
+		</li>
+	  </ul>
+	</nav>
+	<div class="social">
+	  <ul class="social-icons">
+		<li>
+		  <a href="https://www.facebook.com/ChickfilA/" class="icon-facebook-over">
+			<span>
+			  Facebook
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a href="https://www.instagram.com/chickfila/" class="icon-instagram-over">
+			<span>
+			  Instagram
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a href="https://twitter.com/ChickfilA" class="icon-twitter-over">
+			<span>
+			  Twitter
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a href="https://www.youtube.com/user/chickfila" class="icon-youtube-over">
+			<span>
+			  YouTube
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a href="https://www.linkedin.com/company/chick-fil-a-corporate/jobs/" class="icon-linkedin-over">
+			<span>
+			  LinkedIn
+			</span>
+		  </a>
+		</li>
+	  </ul>
+	</div>
+  </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+function displayData(){
+
+	cartData.forEach(function (product) {
+		let total = document.getElementById("cart-total");
+		let price = document.createElement("h3");
+		let quantity = document.createElement("span");
+
+
+let sum = 0;
+for (let i = 0; i < cartData.length; i++) {
+  sum += cartData[i].quantity * cartData[i].price;
+}
+total.innerText = sum;
+	});
+
+
+	var btn = document.getElementById('bt');
+	//btn.addEventListener('click',makepay);
+	function makepay(e) {
+		e.preventDefault();
+
+	var tot = document.getElementById("rupee");
+    var subtotal = document.getElementById("subtotal");
+    var total_order = document.getElementById("total");
+    var bt = document.getElementById("bt");
+    subtotal.innerHTML = `&#x20B9;${total}`;
+    total_order.innerHTML = `&#x20B9;${total}`;
+    bt.innerHTML = `PAY &#x20B9;${total}`;
+     tot.innerHTML = `&#x20B9;${total}`;
+
+
+		var name = document.getElementById("name").value;
+		var card = document.getElementById("card").value;
+		var input = document.getElementById("input").value;
+		var input1 = document.getElementById("input1").value;
+		var input2 = document.getElementById("input2").value;
+	
+		if(name.length==0 || card.length==0 || input.length==0 || input1.length==0 ||input2.length==0 ){
+			var x =	document.getElementById("msg");
+			x.style.display="block";
+			x.style.color="red";
+
+		}else{
+			var x =	document.getElementById("msg");
+			x.style.display="none";
+			var img = document.createElement("img");
+
+			img.src = "https://1.bp.blogspot.com/-TUnIV6lCpUI/Ug5AjWt-L5I/AAAAAAAABRY/X5083DNXw28/s1600/LoadingWait.gif";
+			var src = document.getElementById("gif");
+			src.appendChild(img)
+
+			setTimeout(function () {
+				alert("payment successful")
+				window.location.href="order.html";
+			}, 4000);
+		}
+    
+	}
+
+	cartData.innerHTML=""
+	
+
+}		
+		
+		
+	displayData()
+
+
+
+</script>
