@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi-King House</title>
+    <title>Address</title>
+    <link rel="stylesheet" href="../css/address.css">
+    <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
+    
 </head>
 <style>
-    *{
+     *{
         box-sizing: border-box;
     }
     body{
         margin: 0%;
         padding: 0%;
-    }
+        
     /*Navbar */
-    .navbar{
+    }
+   .navbar{
         width: 100%;
         display: flex;
         align-items: center;
         background-color: white;
         position: fixed;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        
     }
     .options{
         width: 25%;
@@ -56,188 +62,131 @@
         width: 150px;
         height: 50px;
         background-color: #dd0031;
-        color: white;
         border-radius: 20px;
         padding-bottom: 50px;
         margin-left: 125px ;
       }
-      button>h3>a{
+      .navbar>button>a>h3{
         color: white;
       }
-
-      /*Dropdown bar*/
-      .dropdown {
-  float: left;
-  overflow: hidden;
-}
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: #dd0031;
-  padding: 14px 16px;
-  background-color: inherit;
-  font: inherit;
-  margin: 0;
-}
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: aliceblue;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  width: 100%;
-  left: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.column {
-  float: left;
-  padding: 10px;
-}
-.column a {
-  float: none;
-  color: #dd0031;
-  padding: 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.column a:hover {
-  background-color: #ddd;
-}
-.row{
-    height: 80px;
-    display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-/*Top*/
-.top{
-    width: 100%;
-    padding-top: 10%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 25px;
-}
-.tophead{
-    margin:0 10% 0 10% ;
-    display: grid;
-    grid-template-areas: 
-    "a a"
-    "b c ";
-    gap: 30px;
-}
-.tophead>h1:nth-child(1){
-    grid-area: a;
-    color: #dd0031;
-}
-.tophead>div:nth-child(2){
-    grid-area: b;
-}
-.tophead>div:nth-child(3){
-    grid-area: c;  
-}
-
-.topimg{
-    margin-right: 10%; 
-}
-.topimg>img{
-    height: 350px;
-}
-.tophead img{
-    height: 50px;
-}
-
-/*Mid1*/
-.mid1{
-    width: 80%;
-    margin: 3% 10% 5% 10%;
-    display: flex;
-    gap: 2%;
-    justify-content: space-between;
-    font-size: 20px;
-    background-color: aliceblue;
-    border-radius: 3%;
-}
-.mid1text{
-    padding-left: 50px;
-    width: 40%;
-}
-.mid1text>h1{
-    color: #004f71;
-}
-.mid1text>h3{
-    color: #485259;
-}
-.mid1text>div{
-  width: 35%;
-    height: 50px;
-    font-size: 20px;
-    background-color: white;
-    border: solid 2px #dd0031;
-    text-align: center;
-    padding-top: 10px;
-    border-radius: 50px;
-}
-.mid1img>img{
-    border-top-right-radius: 3%;
-    border-bottom-right-radius: 3%;
-}
-
-/*mid2*/
-.mid2{
-    width: 80%;
-    margin: 3% 10% 5% 10%;
-    height: 475px;
+      /*add*/
+    #toop{
     margin: auto;
-    background-image: url(https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Home%20Page%20Refresh/Home%20Page%20Refresh%20V2/Catering_Desktop_compressed.jpg);
-    padding-top: 4%;
-    padding-bottom: 4%;
-    padding-left: 4%;
-    font-size: 27px;
-    border-radius: 20px;
-
+    padding-top: 8%;
+    color: #dd0031;
+    }
+    #box{
+   margin-right: 50px;
+   
 }
-
-.mid2text{
-    width: 35%;
-    height: 350px;
-    background-color: white;
-    padding-left: 25px;
-    border-radius: 20px;
-}
-.mid2text>div{
-    width: 40%;
-    height: 45px;
-    font-size: 20px;
-    background-color: #dd0031;
+#Address{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 80px;
+    padding-top: 10px;
+   }
+   #help{
+    border: 1px solid #CFD8DC;
+    height: 40px;
     text-align: center;
-    padding-top: 10px;
-    border-radius: 10px;
+    padding-top: 20px;
+  color: #90A4AE;
 }
-.mid2text a{
-    color: #ddd;
+   #T_bar{
+       /* max-width: 600px;
+       max-height: 50px; */
+       color:#212121;
+       font-family: system-ui;
+
+   }
+   h2{
+       color: #dd0031;
+       margin-top: 0px;
+   }
+   #Add_form > div{
+     margin-top: 50px;
+     border: 1px solid white;
+     border-bottom: 1px solid gray;
+     width: 70%;
+   }
+   #Add_form > div > input{
+       border: 0px solid white;
+       margin-bottom: 10px;
+       outline: none;
+   }
+   #cit_stat{
+       display:flex;
+
+   }
+   #stat{
+       margin-left: 30px;
+   }
+   #T_add{
+       display: flex;
+       margin-top: 30px;
+       
+   }
+   select{
+       margin-left: 20px;
+   }
+   #continue{
+       height: 40px;
+       max-width: 200px;
+       color: white;
+       background-color:#dd0031;
+       border-radius: 2px;
+       text-align: center;
+       margin: auto;
+       border: 0px solid #e02378;
+       cursor: pointer;
+   }
+   #continue > p{
+       margin: auto;
+       padding-top: 6px;
+   }
+   #manage{
+       display: flex;
+       margin-left: 0px;
+   }
+   #Jeet{
+       margin-left: 20px;
+       border: 0px solid white;
+   }
+   #Jeet > input{
+       border: 1px solid white;
+       outline: none;
+    
+   }
+   #cit_stat > div > input{
+       border: 0px solid white;
+       margin-bottom: 10px;
+       outline: none;
+   }
+  #Jeet  > input{
+      margin-bottom: 10px;
+      outline: none;
+  }
+  select{
+      border: none;
+  }
+  .clear{
+      clear: both;
+  }
+.flt{
+    float: left;
 }
-.mid2text>h2{
-    color: #004f71;
-    padding-top: 10px;
-}
-.mid2text>p{
-    color: #485259;
-    font-size: 26px;
+
+#warn{
+    color: red;
+    font-size: 20px;
+    margin-left: 31%;
+    padding: 10px;
 }
 /*bottom*/
 .bottom{
     background: url(https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Footer%20Images/footer-burger-phone-desktop-new-3.jpg);
-    margin-top:50px;
+    margin-top:300px;
     background-repeat: no-repeat;
   background-size: 100% ;
   
@@ -283,9 +232,6 @@
   src:url(https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/fonts/icomoon.eot?c5r3y4#iefix) format("embedded-opentype"),url(https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/fonts/icomoon.ttf?c5r3y4) format("truetype"),url(https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/fonts/icomoon.woff?c5r3y4) format("woff"),url(https://d2wl1kt18tqdum.cloudfront.net/v2.1.2549-stageb/Assets/Theming/css/fonts/icomoon.svg?c5r3y4#icomoon) format("svg");
   font-weight:400;
   font-style:normal;
-} 
-* { 
-    box-sizing: border-box;
 } 
 
 footer { 
@@ -537,39 +483,20 @@ a,a:hover {
     text-decoration: underline; 
     transition: 1s; 
     border-color: #485259;
-} 
-
-
-
-
-
+}
 
 </style>
 <body>
-
     <!-- Create the Navbar Here  -->
     <div class="navbar">
         <a href="index.html"><img class="logo" src="https://www.linkpicture.com/q/Red-and-Yellow-Illustration-Fried-Chicken-Logo.png"></img></a>
          <a class="loc" href="https://goo.gl/maps/YFDWi28MEUkghYyb9"><img src="https://www.linkpicture.com/q/placeholder_6.png" alt=""> Find a restuarant</a>
         <div class="options"> 
             <div class="dropdown">
-                <a class="dropbtn" href="Menu.html" >Menu
+                <a class="dropbtn" href="Menu.html">Menu
                   <i class="fa fa-caret-down"></i>
                 </a>
-                <div class="dropdown-content"> 
-                  <div class="row">
-                      <a class="column" href="#">Breakfast</a>
-                      <a class="column" href="#">Entrees</a>
-                      <a class="column" href="#">Salads</a>
-                      <a class="column" href="#">Sides</a>
-                      <a class="column" href="#">Kid's Meals</a>
-                      <a class="column" href="#">Treats</a>
-                      <a class="column" href="#">Drinks</a>
-                      <a class="column" href="#">Dipping Sauces and Dressings</a>
-                      <a class="column" href="#">Catering</a>
-                  </div>
                 </div>
-              </div> 
           <a href="">Stories</a>
           <a href="">About</a>
           <a href="">Careers</a>
@@ -578,206 +505,294 @@ a,a:hover {
           <a href="">Chi-King House</a>
           <a href="signup.html">( Sign In )</a>
         </div>
-        <button><h3><a href="order.html">Order food</a></h3></button>
+        <button><a href="order.html"><h3>Order food</h3></a></button>
       </div>
+<div id="toop">
+    <div id="box">
+        <div id="Address">
+            <div id="T_bar">
+                <h2>Add New Address</h2>
 
-      <!-- Create the top section here  -->
-      <div class="top">
-        <div class="tophead">
-            <h1>An original then, an original now</h1>
-            <div class="top-order-pickup"><a href="order.html"> <img src="https://img.freepik.com/premium-vector/readymade-food-go-paperboard-package-eco-friendly-meal-red-delivery-sample-order-product-box-packet-isolated-white-stock-vector-flat-2d-illustration_599742-96.jpg?w=2000" alt=""> Order Pickup</a></div>
-            <div class="top-order-pickup"><a href="order.html"> <img src="https://icones.pro/wp-content/uploads/2021/05/icone-livraison-rouge.png" alt="">Order Delivery </a></div>
+
+                <form action="checkout.html" method="post" id="Add_form" >
+                    <div id="manage">
+                        <select>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                        </select>
+                        <div id="Jeet">
+                            <label>Name:</label>
+                            <input id="nam" type="text" required />
+                        </div>
+                    </div>
+                    <div>
+                        <label>Pincode*</label>
+                        <input id="pin" type="number" required/>
+                    </div>
+                    <div>
+                        <label>Address*</label>
+                        <input id="division" type="text" required/>
+                    </div>
+                    <div>
+                        <label>Landmark:</label>
+                        <input type="text" required/>
+                    </div>
+                    <div id="cit_stat">
+                        <div>
+                            <label>city:</label>
+                            <input id="cit" type="text" required/>
+                        </div>
+                        <div>
+                            <label id="stat">State:</label>
+                            <input id="sta" type="text" required/>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Mobile*</label>
+                        <input id="phone" type="number" required/>
+                    </div>
+                </form>
+            </div>
+            <div id="T_add">
+                <h3>Address type</h3>
+                <select>
+                    <option value="Home">Home</option>
+                    <option value="Office">Office</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
         </div>
-        <div class="topimg">
-            <img  src="https://media.istockphoto.com/id/511520568/photo/fried-chicken-sandwich.jpg?s=612x612&w=0&k=20&c=tpgmjNZeBPVuJwtweGbgwHmr7_0gC0QMV5Ik45whiPk=" alt="">
-        </div>
+      
+        </form>
     </div>
 
-    <!-- Create the mid 1 section here  -->
-
-    <div class="mid1">
-        <div class="mid1text">
-            <h1>Hungry for more?</h1>
-            <h3>Whether you're hungry for a freshly prepared salad or the Chi-King House® Chicken Sandwich with Waffle Potato Fries™, we're serving delicious food made with quality ingredients every day (except Sunday).</h3>
-            <div><a href="Menu.html">View full menu</a></div>
-        </div>
-        <div class="mid1img"><img src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Home%20Page%20Refresh/Home%20Page%20Refresh%20V2/Together-Salads-menu-module-desktop.jpg?h=454&w=648&la=en " alt=""></div>
+    
+   
+    <div class="flt">
+    <p>Address type prefrences are used to plan your delivery.However,shipments can sometimes</p>
+    <p>arrive early or later then planned</p>
+    <div id="warn"></div>
+    <div id="continue">
+        <button onclick="addAddress()"  id="continue" >SAVE AND CONTINUE</button> 
+      
+    
     </div>
+    <br>
+    <br>
+    
+</div>
 
-    <!-- Create the mid 2 section here  -->
-
-    <div class="mid2">
-        <div class="mid2text">
-            <h2>Catering for any gathering</h2>
-            <p>From breakfast items, party trays to packaged meals, Chi-King House® Catering has something for every occasion.</p>
-            <div><a href="Menu.html">View catering menu</a></div>
-        </div>
+<!-- Create the bottom section here  -->
+<div class="bottom">
+    <div>
+        <img src="https://gcdnb.pbrd.co/images/plPK7KN9p8OR.png?o=1" alt="">
+        <h2><span>Join Chi_King House®. Earn points with every qualifying purchase. Redeem available rewards of your choice.</span></h2>
+        <span>The Chick-fil-A App is not presently accepted at Chi-King House® Express™ and Chi-King One licensed locations such as those in airports and college campuses. These locations are operated by professional third-party food contractors and their operating systems do not currently offer guests the ability to earn points or redeem rewards through the Chick-fil-A App.</span>
+        <div>Learn more</div>
+        <h3>Already have an account?  <a href="signup.html">Sign-In</a></h3>
     </div>
+</div>
 
-    <!-- Create the bottom section here  -->
-    <div class="bottom">
-        <div>
-            <img src="https://gcdnb.pbrd.co/images/plPK7KN9p8OR.png?o=1" alt="">
-            <h2><span>Join Chi_King House®. Earn points with every qualifying purchase. Redeem available rewards of your choice.</span></h2>
-            <span>The Chick-fil-A App is not presently accepted at Chi-King House® Express™ and Chi-King One licensed locations such as those in airports and college campuses. These locations are operated by professional third-party food contractors and their operating systems do not currently offer guests the ability to earn points or redeem rewards through the Chick-fil-A App.</span>
-            <div>Learn more</div>
-            <h3>Already have an account?  <a href="signup.html">Sign-In</a></h3>
-        </div>
-    </div>
-
-    <!-- Create the Footer section here  -->
-    <div class="footer-modules wrapper">
-        <nav class="footer-nav">
+<!-- Create the Footer section here  -->
+<div class="footer-modules wrapper">
+    <nav class="footer-nav">
+      <ul>
+        <li>
+          <a href="#">
+            Nutrition &amp; Allergens
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Customer Support
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Careers
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Franchising
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Merchandise
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Press Room
+          </a>
+        </li>
+        <li>
           <ul>
             <li>
               <a href="#">
-                Nutrition &amp; Allergens
+                Do business with us
               </a>
             </li>
             <li>
               <a href="#">
-                Customer Support
+                Terms and Conditions of Use
               </a>
             </li>
             <li>
               <a href="#">
-                Careers
+                Privacy Policy
               </a>
             </li>
             <li>
               <a href="#">
-                Franchising
+                California Privacy Notice
               </a>
             </li>
             <li>
               <a href="#">
-                Merchandise
+                Cookie and Internet-Based Advertising Policy
               </a>
             </li>
             <li>
               <a href="#">
-                Press Room
+                Do Not Sell Or Share My Personal Information
               </a>
             </li>
             <li>
-              <ul>
-                <li>
-                  <a href="#">
-                    Do business with us
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Terms and Conditions of Use
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    California Privacy Notice
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Cookie and Internet-Based Advertising Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Do Not Sell Or Share My Personal Information
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Cookie Preference Center
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Accessibility
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Locations listing
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Legal
-                  </a>
-                </li>
-                <br>
-                <li>
-                  © 2022 SIDGORES Properties, Inc. All rights reserved.         
-                </li>
-              </ul>
+              <a href="#">
+                Cookie Preference Center
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Accessibility
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Locations listing
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Legal
+              </a>
+            </li>
+            <br>
+            <li>
+              © 2022 SIDGORES Properties, Inc. All rights reserved.         
             </li>
           </ul>
-        </nav>
-        <div class="social">
-          <ul class="social-icons">
-            <li>
-              <a href="https://www.facebook.com/ChickfilA/" class="icon-facebook-over">
-                <span>
-                  Facebook
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/chickfila/" class="icon-instagram-over">
-                <span>
-                  Instagram
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/ChickfilA" class="icon-twitter-over">
-                <span>
-                  Twitter
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/user/chickfila" class="icon-youtube-over">
-                <span>
-                  YouTube
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/company/chick-fil-a-corporate/jobs/" class="icon-linkedin-over">
-                <span>
-                  LinkedIn
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-
-
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
+        </li>
+      </ul>
+    </nav>
+    <div class="social">
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.facebook.com/ChickfilA/" class="icon-facebook-over">
+            <span>
+              Facebook
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/chickfila/" class="icon-instagram-over">
+            <span>
+              Instagram
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ChickfilA" class="icon-twitter-over">
+            <span>
+              Twitter
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/user/chickfila" class="icon-youtube-over">
+            <span>
+              YouTube
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/chick-fil-a-corporate/jobs/" class="icon-linkedin-over">
+            <span>
+              LinkedIn
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </body>
+
 </html>
 
- 
+<script>
+    
+
+
+
+var address = [];
+var localstorageitem = localStorage.getItem("address");
+if (localstorageitem !== null) {
+    address = JSON.parse(localstorageitem);
+}
+function addAddress(){
+    check();
+    var nam = document.getElementById("nam").value;
+    var code = document.getElementById("pin").value;
+    var stre = document.getElementById("division").value;
+    var cit = document.getElementById("cit").value;
+    var st = document.getElementById("sta").value;
+    var mobi = document.getElementById("phone").value;
+
+   
+
+    var objpro = {
+        name: nam,
+        street: stre,
+        city: cit,
+        state: st,
+        pincode: code,
+        mobile: mobi,
+
+    } 
+    address.push(objpro);
+    localStorage.setItem("address",JSON.stringify(address));
+
+};
+
+
+
+    // var totalitems = document.getElementById("totalitem");
+
+    // totalitems.innerText = `Total Items  - ${(totalitem)}`
+
+    function check() {
+        var nam = document.getElementById("nam").value;
+    var code = document.getElementById("pin").value;
+    var stre = document.getElementById("division").value;
+    var cit = document.getElementById("cit").value;
+    var st = document.getElementById("sta").value;
+    var mobi = document.getElementById("phone").value;
+
+
+    if((code.length ==6) && (stre.length > 0) && (nam.length > 0) &&  (cit.length > 0) && (st.length > 0) && (cit.length > 0) && (mobi.length == 10)){
+    console.log("yes");
+    window.location.href="checkout.html";
+
+} else{
+   let warni = document.getElementById("warn");
+   warni.innerHTML = "Please fill required fields*"
+}
+    }
+
+   
+</script>
